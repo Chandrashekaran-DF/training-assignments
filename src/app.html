@@ -1,0 +1,20 @@
+<template>
+	<lightning-card >
+		<div style="padding-left: 20px">
+			<div id="numberInputs">
+				Number 1 <input type="number" value={num1} onchange={handleNum1Change} /><br />
+				Number 2 <input type="number" value={num2} onchange={handleNum2Change} />
+			</div>
+				<lightning-radio-group name="OPradioGroup"
+												label="Operations"
+												options={availableOperations}
+												value={value}
+												type="radio"
+												onchange={handleChange}>
+				</lightning-radio-group> <br />
+			<button name="Calculate" onclick={calculateResult}>Calculate Result</button>
+
+			<p>Result: {result}</p>
+		</div>
+	</lightning-card>
+</template>
